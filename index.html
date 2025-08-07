@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
   <title>Trusted Partners Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
@@ -14,97 +16,141 @@
       padding: 0;
       line-height: 1.6;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
     }
+
     header {
       background-color: #ffffff;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      text-align: center;
       padding: 2rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 12px;
-      gap: 2rem;
     }
-    header img {
-      flex: 1 1 300px;
-      max-width: 320px;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      object-fit: cover;
+
+    .logo {
+      max-width: 80px;
       height: auto;
+      filter: grayscale(100%);
+      margin-bottom: 1rem;
     }
-    .header-text {
-      flex: 2 1 400px;
-    }
+
     .header-text h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 2.8rem;
-      margin: 0 0 0.5rem 0;
+      font-size: 2.4rem;
+      margin: 0.5rem 0;
       color: #1a1a1a;
     }
+
     .header-text p {
       font-size: 1.2rem;
       color: #555;
-      margin-top: 0;
+      margin: 0;
     }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: #fff;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      gap: 2rem;
+    }
+
+    .about-img {
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2a2a2a;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.8rem;
+    }
+
     .section {
       background-color: #fff;
-      padding: 1.8rem 2rem;
+      padding: 2rem;
       margin-top: 2rem;
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
+
     .section h2 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
       font-size: 1.8rem;
-      color: #2a2a2a;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
-    .section p {
-      font-size: 1rem;
-      color: #333;
-      margin: 0.4rem 0;
-    }
+
     .section ul {
+      list-style: disc;
       padding-left: 1.2rem;
-      margin: 0.4rem 0;
     }
+
     .section ul li {
-      margin-bottom: 0.5rem;
-      color: #444;
-      font-size: 1rem;
+      margin-bottom: 0.6rem;
     }
+
+    .link-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .link-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .link-list a {
+      font-weight: 600;
+      color: #2a6df4;
+      text-decoration: none;
+    }
+
+    .link-list a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #999;
       margin: 4rem 0 2rem;
     }
+
     a {
       color: #2a6df4;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
+
     a:hover {
-      color: #1a45a2;
       text-decoration: underline;
     }
-    @media (max-width: 700px) {
-      header {
+
+    @media (max-width: 768px) {
+      header, .about-section {
         flex-direction: column;
         text-align: center;
-      }
-      .header-text {
-        flex: none;
-      }
-      header img {
-        max-width: 90%;
       }
     }
   </style>
@@ -112,34 +158,45 @@
 <body>
   <div class="container">
     <header>
-      <img src="images/team-photo.png" alt="Trusted Partners Group Team" />
+      <img src="images/logo.png" alt="Logo" class="logo" />
       <div class="header-text">
         <h1>Trusted Partners Group</h1>
         <p>Affiliate Marketing & Content Collaboration</p>
       </div>
     </header>
 
-    <section class="section">
-      <h2>About Us</h2>
-      <p>Trusted Partners Group is a small digital team focused on affiliate marketing, honest reviews, and content-based product promotion. We collaborate with platforms and SaaS providers to grow awareness through organic traffic and targeted campaigns.</p>
-      <p>Our team has experience in content production across several formats, including video (YouTube), short-form video, web content, and listings. We believe in building trust and long-term value for both users and partners.</p>
+    <section class="about-section">
+      <img src="images/team-photo.png" alt="Team Photo" class="about-img" />
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>Trusted Partners Group is a small digital team focused on affiliate marketing, honest reviews, and content-based product promotion.</p>
+        <p>We collaborate with platforms and SaaS providers to grow awareness through organic traffic and targeted campaigns.</p>
+        <p>Our team works across video content, short-form platforms, web, and listings — delivering value through human-focused and honest creation.</p>
+      </div>
     </section>
 
     <section class="section">
       <h2>Our Focus</h2>
       <ul>
         <li>Writing clear and helpful product reviews</li>
-        <li>Creating content for mental & physical wellness, tech tools, and productivity</li>
-        <li>Promoting partner links through YouTube, short-form videos, and niche web platforms</li>
-        <li>Delivering value through relevant, human-friendly content</li>
+        <li>Creating content for wellness, tech tools, and productivity</li>
+        <li>Promoting links via YouTube, short-form video, niche platforms</li>
+        <li>Delivering long-term value through trusted content</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Important Links</h2>
+      <ul class="link-list">
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="media-kit.html">Media Kit</a></li>
       </ul>
     </section>
 
     <section class="section">
       <h2>Connect With Us</h2>
       <p>📧 Email: <a href="mailto:trustedpartnersg@gmail.com">trustedpartnersg@gmail.com</a></p>
-      <p>📺 YouTube Channel 1: <a href="https://www.youtube.com/@SoulTherapy-" target="_blank" rel="noopener">Mental & Physical Wellness Content</a></p>
-      <p>📺 YouTube Channel 2: <a href="https://www.youtube.com/@Daily_Facts_Kaleidoscope" target="_blank" rel="noopener">Quick facts and insights on psychology, relationships, women's topics, and wellness</a></p>
+      <p>📧 Linkedin: <a href="https://www.linkedin.com/company/trusted-partners-group/" target="_blank">Trusted Partners Group</a> 
     </section>
 
     <footer>
@@ -148,3 +205,6 @@
   </div>
 </body>
 </html>
+
+
+
